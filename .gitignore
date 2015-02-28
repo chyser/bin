@@ -1,2 +1,9 @@
+vpn.dat
 *.pyc
+*.db
+*.cov
+*.pyo
+*.mak
 *~
+aoh
+html

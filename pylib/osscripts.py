@@ -35,7 +35,8 @@ import warnings
 import tempfile
 import subprocess
 
-import pylib.lex as lex
+#import pylib.lex as lex
+import lex
 
 
 try:
@@ -1428,7 +1429,8 @@ def _usage(rc, doc, errmsg=""):
 usage = _usage
 
 
-from pylib.options import mopt as gopt
+#from pylib.options import mopt as gopt
+from options import mopt as gopt
 
 
 #
