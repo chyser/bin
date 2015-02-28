@@ -1,8 +1,5 @@
 #!/usr/bin/env python
-"""
-usage:
 
-"""
 import pylib.osscripts as oss
 import pylib.util as util
 import pylib.debug as dbg
@@ -11,20 +8,19 @@ import fnmatch
 import os.path
 import hashlib
 
+
 #-------------------------------------------------------------------------------
 class DirSync(object):
 #-------------------------------------------------------------------------------
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    def __init__(self, SrcPath, DestPath, excludes, filters=None, verbose=None):
+    def __init__(self, srcPath, destPath, excludes, filters=None, verbose=None):
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         super(DirSync, self).__init__()
-        self.SrcPath = SrcPath
-        self.DestPath = DestPath
+        self.srcPath = srcPath
+        self.destPath = destPath
         self.excludes = set(excludes)
-        if not filters:
-            self.filters = ['*']
-        else:
-            self.filters = filters
+
+        self.filters = filters if filters else ['*']
         self.verbose = verbose
 
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
@@ -34,8 +30,6 @@ class DirSync(object):
         """
 
         def __p(hist, dirn, names):
-            fnmatch
-
             for n in list(names):
                 if n in self.excludes:
                     names.remove(n)
@@ -67,12 +61,12 @@ class DirSync(object):
         print msg
 
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    def SyncDirs(self, dst=None, pretend=0):
+    def SyncDirs(self, dst=None, pretend=False):
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        src = self.GetFileInfo(self.SrcPath)
+        src = self.GetFileInfo(self.srcPath)
 
-        if dst is None:
-            dst = self.GetFileInfo(self.DestPath)
+        if not dst:
+            dst = self.GetFileInfo(self.destPath)
 
         d, a = util.DiffLists(src.keys(), dst.keys())
 
@@ -83,13 +77,13 @@ class DirSync(object):
 
         for f in d:
             if not pretend:
-                oss.rm('-rf', self.DestPath + '/' + f)
+                oss.rm('-rf', self.destPath + '/' + f)
 
         self.log("\nadding: " +  str(a))
 
         for f in a:
-            df = oss.normpath(self.DestPath + '/' + f)
-            sf = oss.normpath(self.SrcPath + '/' + f)
+            df = oss.normpath(self.destPath + '/' + f)
+            sf = oss.normpath(self.srcPath + '/' + f)
             if oss.IsDir(sf):
                 if not pretend:
                     util.CallNoException(oss.mkdirs, (df))
@@ -97,8 +91,6 @@ class DirSync(object):
                 pth, nm, ext = oss.splitFilename(df)
                 if not pretend:
                     oss.mkdirs(pth)
-
-                if not pretend:
                     oss.cp(sf, df)
 
         chgd = []
@@ -106,29 +98,26 @@ class DirSync(object):
 
         for f in chk:
             if src[f] != dst[f]:
-                df = oss.normpath(self.DestPath + '/' + f)
-                sf = oss.normpath(self.SrcPath + '/' + f)
+                df = oss.normpath(self.destPath + '/' + f)
+                sf = oss.normpath(self.srcPath + '/' + f)
                 chgd.append(f)
 
                 pth, nm, ext = oss.splitFilename(df)
                 if not pretend:
                     oss.mkdirs(pth)
-
-                if not pretend:
                     util.CallNoException(oss.cp, (sf, df))
 
 
         self.log("\nchanged: " +  str(chgd), bl='@')
-
-        return self.GetFileInfo(self.DestPath)
+        return self.GetFileInfo(self.destPath)
 
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-    def UpdateDest(self, dst=None, pretend=0):
+    def UpdateDest(self, dst=None, pretend=False):
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
-        src = self.GetFileInfo(self.SrcPath)
+        src = self.GetFileInfo(self.srcPath)
 
-        if dst is None:
-            dst = self.GetFileInfo(self.DestPath)
+        if not dst:
+            dst = self.GetFileInfo(self.destPath)
 
         d, a = util.DiffLists(src.keys(), dst.keys())
 
@@ -137,21 +126,17 @@ class DirSync(object):
 
         for f in chk:
             if src[f] != dst[f]:
-                df = oss.normpath(self.DestPath + '/' + f)
-                sf = oss.normpath(self.SrcPath + '/' + f)
+                df = oss.normpath(self.destPath + '/' + f)
+                sf = oss.normpath(self.srcPath + '/' + f)
                 chgd.append(f)
 
                 pth, nm, ext = oss.splitFilename(df)
                 if not pretend:
                     oss.mkdirs(pth)
-
-                if not pretend:
                     util.CallNoException(oss.cp, (sf, df))
 
-
         self.log("\nchanged: " +  str(chgd), bl='@')
-
-        return self.GetFileInfo(self.DestPath)
+        return self.GetFileInfo(self.destPath)
 
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     def run(self):
@@ -161,7 +146,7 @@ class DirSync(object):
     excludes: %s
     filters : %s
     verbose : %s
-""" % (self.SrcPath, self.DestPath, self.excludes, self.filters, self.verbose)
+""" % (self.srcPath, self.destPath, self.excludes, self.filters, self.verbose)
 
         self.log(msg, nl='\n')
 

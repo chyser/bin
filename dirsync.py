@@ -1,7 +1,7 @@
 #!/usr/bin/env python
 """
 usage: dirsync options [[excludes]...]
-    -s | --src      : source directory
+    -s | --src      : source directory (default=.)
     -d | --dest     : destination directory
 
     -u | --updest   : update destination only, no add, no remove
@@ -12,25 +12,18 @@ usage: dirsync options [[excludes]...]
 import pylib.osscripts as oss
 import pylib.syncdir as dsync
 
-#-------------------------------------------------------------------------------
-def usage(rc, errmsg=""):
-#-------------------------------------------------------------------------------
-    """ provides doc string as usage information
-    """
-    print >> oss.stderr, __doc__
-    if errmsg:
-        print >> oss.stderr, "\nError:\n" + str(errmsg)
-    oss.exit(rc)
 
 #-------------------------------------------------------------------------------
-if __name__ == "__main__":
+def main(argv):
 #-------------------------------------------------------------------------------
-    excludes, opts = oss.gopt(oss.argv[1:], [('u', 'updest'), ('p', 'pretend')], [('s', 'src'), ('d', 'dest'), ('f', 'filters')], usage)
+    excludes, opts = oss.gopt(argv[1:], [('u', 'updest'), ('p', 'pretend')],
+            [('s', 'src'), ('d', 'dest'), ('f', 'filters')], __doc__)
 
-    if opts.src is None or opts.dest is None:
-        usage(1, "Must specify src and dest directories")
+    if not opts.dest:
+        opts.usage(1, "Must specify directories")
 
-    print "src  =", opts.src
+    src = opts.get('src', '.')
+    print "src  =", src
     print "dest =", opts.dest
     print "excludes:", excludes
 
@@ -41,13 +34,17 @@ if __name__ == "__main__":
             opts.filters = [opts.filters]
     print "filters:", opts.filters
 
-    if not oss.exists(opts.src):
-        usage(2, "Source directory '%s' does not exist" % opts.src)
+    if not oss.exists(src):
+        opts.usage(2, "Source directory '%s' does not exist" % src)
 
     if not oss.exists(opts.dest):
-        usage(2, "Destination directory '%s' does not exist" % opts.dest)
+        opts.usage(2, "Destination directory '%s' does not exist" % opts.dest)
 
     if opts.updest:
-        dsync.DirSync(opts.src, opts.dest, excludes, opts.filters).UpdateDest(pretend=opts.pretend)
+        dsync.DirSync(src, opts.dest, excludes, opts.filters).UpdateDest(pretend=opts.pretend)
     else:
-        dsync.DirSync(opts.src, opts.dest, excludes, opts.filters).SyncDirs(pretend=opts.pretend)
+        dsync.DirSync(src, opts.dest, excludes, opts.filters).SyncDirs(pretend=opts.pretend)
+
+
+if __name__ == "__main__":
+    main(oss.argv)
