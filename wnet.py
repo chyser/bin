@@ -20,21 +20,21 @@ KDIR = NDIR + "/wlcfg/"
 def main(argv):
 #-------------------------------------------------------------------------------
     """ usage: wnet [options]
-    
+
         options:
 	    -s | --scan  : scan for wireless networks
     """
 
     args, opts = oss.gopt(argv[1:], [('s', 'scan')], [], main.__doc__)
-    
+
     nets = scanNetworks()
 
     if opts.scan:
         for net in nets:
 	     print('-'*40)
-	     print('ESSID:', net.name)      
-	     print('    qual:', net.qual)      
-	     print('    encryption:', net.encrypt)      
+	     print('ESSID:', net.name)
+	     print('    qual:', net.qual)
+	     print('    encryption:', net.encrypt)
 
         oss.exit(0)
 
@@ -55,7 +55,7 @@ def main(argv):
 	    print('   ', net)
 
     oss.exit(0)
-        
+
 
 #-------------------------------------------------------------------------------
 class WNet(object):
@@ -102,7 +102,7 @@ class WNet(object):
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
         return self.name
 
-        
+
 #-------------------------------------------------------------------------------
 def scanNetworks():
 #-------------------------------------------------------------------------------
