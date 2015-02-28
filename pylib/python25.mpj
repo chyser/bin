@@ -1,0 +1,338 @@
+<!--
+MyEdit Project File
+-->
+<project version="2.2" type="Project" name="python25">
+
+    <!--
+    Environment for this project
+    -->
+
+    <env eolMode="CRLF" backupDir="./bak" dir="C:\bin\pylib\pylib"/>
+
+    <!--
+    Editor build commands mapped to function keys
+    -->
+
+    <build_cmds>
+        <cmd cmd="make" type="build"/>
+        <cmd cmd="None" type="rebuild"/>
+        <cmd cmd="None" type="execute"/>
+        <cmd cmd="None" type="debug"/>
+        <cmd cmd="None" type="build_unit"/>
+        <cmd cmd="None" type="rebuild_unit"/>
+        <cmd cmd="None" type="execute_unit"/>
+        <cmd cmd="None" type="debug_unit"/>
+    </build_cmds>
+
+
+    <!--
+    Source Control
+    -->
+    <source_control_cmds>
+        <cmd cmd="python C:/bin/mycvs.py add $file_dir" type="add"/>
+        <cmd cmd="python C:/bin/mycvs.py cf $file_dir" type="check"/>
+        <cmd cmd='python C:/bin/mycvs.py -m "$msg" ci $file_dir' type="checkin"/>
+        <cmd cmd="python C:/bin/mycvs.py up $file_dir" type="update"/>
+    </source_control_cmds>
+
+
+    <!--
+    Per Project Configuration
+    -->
+    <project_configuration/>
+
+    <!--
+    Files in project
+    -->
+    <files>
+        <!--
+        path is only required field
+        -->
+
+        <!-- &lt;file path="C:/bin/pylib/pylib/filter.py" file_cat="None" view="text" type="py" name="filter.py" prop=""/&gt; -->
+        <file name="gopherlib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\gopherlib.py" type="py" view="text"/>
+        <file name="posixfile.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\posixfile.py" type="py" view="text"/>
+        <file name="site.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\site.py" type="py" view="text"/>
+        <file name="printout.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\printout.py" type="py" view="text"/>
+        <file name="mimify.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\mimify.py" type="py" view="text"/>
+        <file name="traceback.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\traceback.py" type="py" view="text"/>
+        <file name="zipfile.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\zipfile.py" type="py" view="text"/>
+        <file name="flashwin.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\flashwin.py" type="py" view="text"/>
+        <file name="tty.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\tty.py" type="py" view="text"/>
+        <file name="multisash.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\multisash.py" type="py" view="text"/>
+        <file name="cgitb.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\cgitb.py" type="py" view="text"/>
+        <file name="dircache.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\dircache.py" type="py" view="text"/>
+        <file name="shlex.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\shlex.py" type="py" view="text"/>
+        <file name="tempfile.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\tempfile.py" type="py" view="text"/>
+        <file name="sre.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sre.py" type="py" view="text"/>
+        <file name="xmlrpclib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\xmlrpclib.py" type="py" view="text"/>
+        <file name="netrc.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\netrc.py" type="py" view="text"/>
+        <file name="re.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\re.py" type="py" view="text"/>
+        <file name="wordwrap.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\wordwrap.py" type="py" view="text"/>
+        <file name="wave.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\wave.py" type="py" view="text"/>
+        <file name="unittest.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\unittest.py" type="py" view="text"/>
+        <file name="urllib2.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\urllib2.py" type="py" view="text"/>
+        <file name="base64.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\base64.py" type="py" view="text"/>
+        <file name="modulefinder.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\modulefinder.py" type="py" view="text"/>
+        <file name="ihooks.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\ihooks.py" type="py" view="text"/>
+        <file name="binhex.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\binhex.py" type="py" view="text"/>
+        <file name="optparse.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\optparse.py" type="py" view="text"/>
+        <file name="nturl2path.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\nturl2path.py" type="py" view="text"/>
+        <file name="pickle.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pickle.py" type="py" view="text"/>
+        <file name="pkgutil.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pkgutil.py" type="py" view="text"/>
+        <file name="layoutf.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\layoutf.py" type="py" view="text"/>
+        <file name="UserList.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\userlist.py" type="py" view="text"/>
+        <file name="imaplib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\imaplib.py" type="py" view="text"/>
+        <file name="telnetlib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\telnetlib.py" type="py" view="text"/>
+        <file name="langlistctrl.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\langlistctrl.py" type="py" view="text"/>
+        <file name="vtk.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\vtk.py" type="py" view="text"/>
+        <file name="codecs.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\codecs.py" type="py" view="text"/>
+        <file name="BaseHTTPServer.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\basehttpserver.py" type="py" view="text"/>
+        <file name="cgi.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\cgi.py" type="py" view="text"/>
+        <file name="__future__.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\__future__.py" type="py" view="text"/>
+        <file name="plot.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\plot.py" type="py" view="text"/>
+        <file name="httplib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\httplib.py" type="py" view="text"/>
+        <file name="dialogs.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\dialogs.py" type="py" view="text"/>
+        <file name="anydbm.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\anydbm.py" type="py" view="text"/>
+        <file name="SimpleXMLRPCServer.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\simplexmlrpcserver.py" type="py" view="text"/>
+        <file name="macurl2path.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\macurl2path.py" type="py" view="text"/>
+        <file name="pydoc.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pydoc.py" type="py" view="text"/>
+        <file name="wxPlotCanvas.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\wxplotcanvas.py" type="py" view="text"/>
+        <file name="tabnanny.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\tabnanny.py" type="py" view="text"/>
+        <file name="ntpath.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\ntpath.py" type="py" view="text"/>
+        <file name="hyperlink.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\hyperlink.py" type="py" view="text"/>
+        <file name="mutex.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\mutex.py" type="py" view="text"/>
+        <file name="symtable.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\symtable.py" type="py" view="text"/>
+        <file name="heapq.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\heapq.py" type="py" view="text"/>
+        <file name="textwrap.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\textwrap.py" type="py" view="text"/>
+        <file name="UserDict.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\userdict.py" type="py" view="text"/>
+        <file name="sre_constants.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sre_constants.py" type="py" view="text"/>
+        <file name="imageutils.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\imageutils.py" type="py" view="text"/>
+        <file name="gzip.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\gzip.py" type="py" view="text"/>
+        <file name="fpformat.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\fpformat.py" type="py" view="text"/>
+        <file name="pyshell.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\pyshell.py" type="py" view="text"/>
+        <file name="urllib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\urllib.py" type="py" view="text"/>
+        <file name="hashlib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\hashlib.py" type="py" view="text"/>
+        <file name="shell.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\shell.py" type="py" view="text"/>
+        <file name="getpass.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\getpass.py" type="py" view="text"/>
+        <file name="anchors.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\anchors.py" type="py" view="text"/>
+        <file name="user.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\user.py" type="py" view="text"/>
+        <file name="repr.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\repr.py" type="py" view="text"/>
+        <file name="colorsys.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\colorsys.py" type="py" view="text"/>
+        <file name="_threading_local.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\_threading_local.py" type="py" view="text"/>
+        <file name="pdfwin.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\pdfwin.py" type="py" view="text"/>
+        <file name="customtreectrl.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\customtreectrl.py" type="py" view="text"/>
+        <file name="difflib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\difflib.py" type="py" view="text"/>
+        <file name="gettext.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\gettext.py" type="py" view="text"/>
+        <file name="platform.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\platform.py" type="py" view="text"/>
+        <file name="decimal.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\decimal.py" type="py" view="text"/>
+        <file name="functools.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\functools.py" type="py" view="text"/>
+        <file name="types.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\types.py" type="py" view="text"/>
+        <file name="mimetypes.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\mimetypes.py" type="py" view="text"/>
+        <file name="fancytext.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\fancytext.py" type="py" view="text"/>
+        <file name="whichdb.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\whichdb.py" type="py" view="text"/>
+        <file name="struct.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\struct.py" type="py" view="text"/>
+        <file name="smtpd.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\smtpd.py" type="py" view="text"/>
+        <file name="cProfile.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\cprofile.py" type="py" view="text"/>
+        <file name="statbmp.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\statbmp.py" type="py" view="text"/>
+        <file name="sgmllib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sgmllib.py" type="py" view="text"/>
+        <file name="this.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\this.py" type="py" view="text"/>
+        <file name="token.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\token.py" type="py" view="text"/>
+        <file name="copy_reg.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\copy_reg.py" type="py" view="text"/>
+        <file name="pdb.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pdb.py" type="py" view="text"/>
+        <file name="intctrl.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\intctrl.py" type="py" view="text"/>
+        <file name="dummy_threading.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\dummy_threading.py" type="py" view="text"/>
+        <file name="multifile.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\multifile.py" type="py" view="text"/>
+        <file name="warnings.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\warnings.py" type="py" view="text"/>
+        <file name="UserString.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\userstring.py" type="py" view="text"/>
+        <file name="evtmgr.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\evtmgr.py" type="py" view="text"/>
+        <file name="nntplib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\nntplib.py" type="py" view="text"/>
+        <file name="cookielib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\cookielib.py" type="py" view="text"/>
+        <file name="mailbox.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\mailbox.py" type="py" view="text"/>
+        <file name="calendar.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\calendar.py" type="py" view="text"/>
+        <file name="inspection.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\inspection.py" type="py" view="text"/>
+        <file name="compileall.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\compileall.py" type="py" view="text"/>
+        <file name="sets.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sets.py" type="py" view="text"/>
+        <file name="scrolledpanel.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\scrolledpanel.py" type="py" view="text"/>
+        <file name="smtplib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\smtplib.py" type="py" view="text"/>
+        <file name="posixpath.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\posixpath.py" type="py" view="text"/>
+        <file name="HTMLParser.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\htmlparser.py" type="py" view="text"/>
+        <file name="activexwrapper.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\activexwrapper.py" type="py" view="text"/>
+        <file name="ftplib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\ftplib.py" type="py" view="text"/>
+        <file name="htmlentitydefs.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\htmlentitydefs.py" type="py" view="text"/>
+        <file name="xdrlib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\xdrlib.py" type="py" view="text"/>
+        <file name="__init__.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\__init__.py" type="py" view="text"/>
+        <file name="xmllib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\xmllib.py" type="py" view="text"/>
+        <file name="dragscroller.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\dragscroller.py" type="py" view="text"/>
+        <file name="fnmatch.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\fnmatch.py" type="py" view="text"/>
+        <file name="iewin.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\iewin.py" type="py" view="text"/>
+        <file name="splashscreen.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\splashscreen.py" type="py" view="text"/>
+        <file name="SocketServer.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\socketserver.py" type="py" view="text"/>
+        <file name="robotparser.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\robotparser.py" type="py" view="text"/>
+        <file name="htmllib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\htmllib.py" type="py" view="text"/>
+        <file name="pstats.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pstats.py" type="py" view="text"/>
+        <file name="docview.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\docview.py" type="py" view="text"/>
+        <file name="imghdr.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\imghdr.py" type="py" view="text"/>
+        <file name="filebrowsebutton.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\filebrowsebutton.py" type="py" view="text"/>
+        <file name="inspect.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\inspect.py" type="py" view="text"/>
+        <file name="bisect.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\bisect.py" type="py" view="text"/>
+        <file name="StringIO.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\stringio.py" type="py" view="text"/>
+        <file name="os.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\os.py" type="py" view="text"/>
+        <file name="shelve.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\shelve.py" type="py" view="text"/>
+        <file name="rfc822.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\rfc822.py" type="py" view="text"/>
+        <file name="rcsizer.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\rcsizer.py" type="py" view="text"/>
+        <file name="wxpTag.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\wxptag.py" type="py" view="text"/>
+        <file name="python25" file_cat="None" uri="None" prop="" path="python25.mpj" type="mpj" view="text"/>
+        <file name="splitter.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\splitter.py" type="py" view="text"/>
+        <file name="mvctree.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\mvctree.py" type="py" view="text"/>
+        <file name="pickletools.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pickletools.py" type="py" view="text"/>
+        <file name="Queue.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\queue.py" type="py" view="text"/>
+        <file name="statvfs.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\statvfs.py" type="py" view="text"/>
+        <file name="colourdb.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\colourdb.py" type="py" view="text"/>
+        <file name="asyncore.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\asyncore.py" type="py" view="text"/>
+        <file name="stat.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\stat.py" type="py" view="text"/>
+        <file name="aifc.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\aifc.py" type="py" view="text"/>
+        <file name="webbrowser.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\webbrowser.py" type="py" view="text"/>
+        <file name="urlparse.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\urlparse.py" type="py" view="text"/>
+        <file name="toaiff.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\toaiff.py" type="py" view="text"/>
+        <file name="_strptime.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\_strptime.py" type="py" view="text"/>
+        <file name="sre_compile.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sre_compile.py" type="py" view="text"/>
+        <file name="chunk.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\chunk.py" type="py" view="text"/>
+        <file name="mimetools.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\mimetools.py" type="py" view="text"/>
+        <file name="tokenize.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\tokenize.py" type="py" view="text"/>
+        <file name="CGIHTTPServer.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\cgihttpserver.py" type="py" view="text"/>
+        <file name="socket.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\socket.py" type="py" view="text"/>
+        <file name="subprocess.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\subprocess.py" type="py" view="text"/>
+        <file name="timeit.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\timeit.py" type="py" view="text"/>
+        <file name="imputil.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\imputil.py" type="py" view="text"/>
+        <file name="colourselect.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\colourselect.py" type="py" view="text"/>
+        <file name="csv.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\csv.py" type="py" view="text"/>
+        <file name="py_compile.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\py_compile.py" type="py" view="text"/>
+        <file name="popupctl.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\popupctl.py" type="py" view="text"/>
+        <file name="sunaudio.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sunaudio.py" type="py" view="text"/>
+        <file name="quopri.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\quopri.py" type="py" view="text"/>
+        <file name="sunau.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sunau.py" type="py" view="text"/>
+        <file name="trace.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\trace.py" type="py" view="text"/>
+        <file name="weakref.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\weakref.py" type="py" view="text"/>
+        <file name="audiodev.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\audiodev.py" type="py" view="text"/>
+        <file name="gestures.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\gestures.py" type="py" view="text"/>
+        <file name="ConfigParser.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\configparser.py" type="py" view="text"/>
+        <file name="throbber.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\throbber.py" type="py" view="text"/>
+        <file name="ClickableHtmlWindow.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\clickablehtmlwindow.py" type="py" view="text"/>
+        <file name="poplib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\poplib.py" type="py" view="text"/>
+        <file name="MimeWriter.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\mimewriter.py" type="py" view="text"/>
+        <file name="flatnotebook.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\flatnotebook.py" type="py" view="text"/>
+        <file name="sndhdr.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sndhdr.py" type="py" view="text"/>
+        <file name="buttonpanel.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\buttonpanel.py" type="py" view="text"/>
+        <file name="sched.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sched.py" type="py" view="text"/>
+        <file name="pprint.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pprint.py" type="py" view="text"/>
+        <file name="grids.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\grids.py" type="py" view="text"/>
+        <file name="profile.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\profile.py" type="py" view="text"/>
+        <file name="__phello__.foo.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\__phello__.foo.py" type="py" view="text"/>
+        <file name="symbol.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\symbol.py" type="py" view="text"/>
+        <file name="pty.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pty.py" type="py" view="text"/>
+        <file name="md5.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\md5.py" type="py" view="text"/>
+        <file name="mailcap.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\mailcap.py" type="py" view="text"/>
+        <file name="codeop.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\codeop.py" type="py" view="text"/>
+        <file name="pydocview.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\pydocview.py" type="py" view="text"/>
+        <file name="floatbar.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\floatbar.py" type="py" view="text"/>
+        <file name="uu.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\uu.py" type="py" view="text"/>
+        <file name="rightalign.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\rightalign.py" type="py" view="text"/>
+        <file name="atexit.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\atexit.py" type="py" view="text"/>
+        <file name="mhlib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\mhlib.py" type="py" view="text"/>
+        <file name="gridmovers.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\gridmovers.py" type="py" view="text"/>
+        <file name="threading.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\threading.py" type="py" view="text"/>
+        <file name="code.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\code.py" type="py" view="text"/>
+        <file name="os2emxpath.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\os2emxpath.py" type="py" view="text"/>
+        <file name="sheet.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\sheet.py" type="py" view="text"/>
+        <file name="Bastion.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\bastion.py" type="py" view="text"/>
+        <file name="opcode.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\opcode.py" type="py" view="text"/>
+        <file name="bdb.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\bdb.py" type="py" view="text"/>
+        <file name="foldmenu.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\foldmenu.py" type="py" view="text"/>
+        <file name="copy.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\copy.py" type="py" view="text"/>
+        <file name="CDate.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\cdate.py" type="py" view="text"/>
+        <file name="rpcMixin.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\rpcmixin.py" type="py" view="text"/>
+        <file name="ticker.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\ticker.py" type="py" view="text"/>
+        <file name="dbhash.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\dbhash.py" type="py" view="text"/>
+        <file name="imagebrowser.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\imagebrowser.py" type="py" view="text"/>
+        <file name="rlcompleter.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\rlcompleter.py" type="py" view="text"/>
+        <file name="stattext.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\stattext.py" type="py" view="text"/>
+        <file name="linecache.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\linecache.py" type="py" view="text"/>
+        <file name="random.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\random.py" type="py" view="text"/>
+        <file name="pipes.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pipes.py" type="py" view="text"/>
+        <file name="getopt.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\getopt.py" type="py" view="text"/>
+        <file name="pyclbr.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\pyclbr.py" type="py" view="text"/>
+        <file name="sha.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sha.py" type="py" view="text"/>
+        <file name="formatter.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\formatter.py" type="py" view="text"/>
+        <file name="pubsub.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\pubsub.py" type="py" view="text"/>
+        <file name="_MozillaCookieJar.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\_mozillacookiejar.py" type="py" view="text"/>
+        <file name="infoframe.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\infoframe.py" type="py" view="text"/>
+        <file name="combotreebox.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\combotreebox.py" type="py" view="text"/>
+        <file name="keyword.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\keyword.py" type="py" view="text"/>
+        <file name="uuid.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\uuid.py" type="py" view="text"/>
+        <file name="buttons.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\buttons.py" type="py" view="text"/>
+        <file name="asynchat.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\asynchat.py" type="py" view="text"/>
+        <file name="popen2.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\popen2.py" type="py" view="text"/>
+        <file name="runpy.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\runpy.py" type="py" view="text"/>
+        <file name="rexec.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\rexec.py" type="py" view="text"/>
+        <file name="foldpanelbar.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\foldpanelbar.py" type="py" view="text"/>
+        <file name="string.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\string.py" type="py" view="text"/>
+        <file name="dumbdbm.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\dumbdbm.py" type="py" view="text"/>
+        <file name="new.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\new.py" type="py" view="text"/>
+        <file name="macpath.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\macpath.py" type="py" view="text"/>
+        <file name="_LWPCookieJar.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\_lwpcookiejar.py" type="py" view="text"/>
+        <file name="stringold.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\stringold.py" type="py" view="text"/>
+        <file name="delayedresult.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\delayedresult.py" type="py" view="text"/>
+        <file name="stringprep.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\stringprep.py" type="py" view="text"/>
+        <file name="hmac.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\hmac.py" type="py" view="text"/>
+        <file name="ticker_xrc.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\ticker_xrc.py" type="py" view="text"/>
+        <file name="tarfile.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\tarfile.py" type="py" view="text"/>
+        <file name="Cookie.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\cookie.py" type="py" view="text"/>
+        <file name="cmd.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\cmd.py" type="py" view="text"/>
+        <file name="sre_parse.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\sre_parse.py" type="py" view="text"/>
+        <file name="markupbase.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\markupbase.py" type="py" view="text"/>
+        <file name="glob.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\glob.py" type="py" view="text"/>
+        <file name="shutil.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\shutil.py" type="py" view="text"/>
+        <file name="SimpleHTTPServer.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\simplehttpserver.py" type="py" view="text"/>
+        <file name="commands.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\commands.py" type="py" view="text"/>
+        <file name="contextlib.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\contextlib.py" type="py" view="text"/>
+        <file name="dummy_thread.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\dummy_thread.py" type="py" view="text"/>
+        <file name="dis.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\dis.py" type="py" view="text"/>
+        <file name="DocXMLRPCServer.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\docxmlrpcserver.py" type="py" view="text"/>
+        <file name="filecmp.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\filecmp.py" type="py" view="text"/>
+        <file name="expando.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\expando.py" type="py" view="text"/>
+        <file name="doctest.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\doctest.py" type="py" view="text"/>
+        <file name="locale.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\locale.py" type="py" view="text"/>
+        <file name="fileinput.py" file_cat="Standard Lib" uri="None" prop="" path="c:\python25\lib\fileinput.py" type="py" view="text"/>
+        <file name="newevent.py" file_cat="None" uri="None" prop="" path="c:\python25\lib\site-packages\wx-2.8-msw-ansi\wx\lib\newevent.py" type="py" view="text"/>
+    </files>
+
+
+    <!--
+    Subprojects within this project
+    -->
+    <projects>
+        <!-- &lt;sub_proj pathname=""/&gt; -->
+    </projects>
+
+
+    <!--
+    Organizational display
+    -->
+    <categories>
+        <!--
+        path is filter applied in file order
+        order is display order [1:-1]
+        -->
+
+        <!-- &lt;file_cat order="" name="" path=""/&gt; -->
+        <file_cat path="*site-packages/wx-2.8-msw-ansi/wx/*/*.py" order="2" name="wx"/>
+        <file_cat path="*.py" order="1" name="Standard Lib"/>
+    </categories>
+
+    <tools/>
+    <helpFiles/>
+    <tools/>
+    <plugins/>
+</project>
+

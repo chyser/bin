@@ -1,0 +1,3 @@
+[epydoc]
+modules: adt.py ansi.py config.py convert.py copyobj.py debug.py game.py gnuplot.py graph.py lex.py mincfile.py mthread.py mx.py mxmdi.py osscripts.py path.py pathfile.py pyrpc.py relib.py runpy.py statistics.py struct2.py threading.py util.py win32.py xmlparse.py
+name: pylib

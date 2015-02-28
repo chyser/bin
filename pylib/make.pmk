@@ -1,0 +1,21 @@
+PROJECT = PYTHON
+
+default: all
+
+all: clean tester doc
+
+doc:
+	python C:/bin/epydoc.py -v --config epydoc.config *.py net/*.py
+	#python /bin/epydoc.py -v --config epydoc.config template.py
+
+tester: tester_debug tester_optimize
+
+tester_debug:
+	python -d tester.py *.py
+
+tester_optimize:
+	python -OO tester.py *.py
+
+clean:
+	rm -rf *.pyc *.pyo *.chk
+

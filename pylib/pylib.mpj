@@ -1,0 +1,211 @@
+<!--
+MyEdit Project File
+-->
+<project version="2.2" type="Project" name="pylib">
+
+    <!--
+    Environment for this project
+    -->
+
+    <env eolMode="CRLF" backupDir="./bak" dir="C:\bin\pylib\pylib"/>
+
+    <!--
+    Editor build commands mapped to function keys
+    -->
+
+    <build_cmds>
+        <cmd cmd="cmd /c pmake.bat" type="build"/>
+        <cmd cmd="None" type="rebuild"/>
+        <cmd cmd="cmd /c runit26.bat -p -d . " type="execute"/>
+        <cmd cmd="None" type="debug"/>
+        <cmd cmd="None" type="build_unit"/>
+        <cmd cmd="None" type="rebuild_unit"/>
+        <cmd cmd="cmd /c runit26.bat -p -d . %s" type="execute_unit"/>
+        <cmd cmd="None" type="debug_unit"/>
+    </build_cmds>
+
+
+    <!--
+    Source Control
+    -->
+    <source_control_cmds>
+        <cmd cmd="python C:/bin/mycvs.py add $file_dir" type="add"/>
+        <cmd cmd="python C:/bin/mycvs.py cf $file_dir" type="check"/>
+        <cmd cmd='python C:/bin/mycvs.py -m "$msg" ci $file_dir' type="checkin"/>
+        <cmd cmd="python C:/bin/mycvs.py up $file_dir" type="update"/>
+    </source_control_cmds>
+
+
+    <!--
+    Per Project Configuration
+    -->
+    <project_configuration/>
+
+    <!--
+    Files in project
+    -->
+    <files>
+        <!--
+        path is only required field
+        -->
+
+        <!-- &lt;file path="C:/bin/pylib/pylib/filter.py" file_cat="None" view="text" type="py" name="filter.py" prop=""/&gt; -->
+        <file name="__init__.py" file_cat="Admin" uri="None" prop="" path="__init__.py" type="py" view="text"/>
+        <file name="adt.py" file_cat="None" uri="None" prop="" path="adt.py" type="py" view="text"/>
+        <file name="ansi.py" file_cat="None" uri="None" prop="" path="ansi.py" type="py" view="text"/>
+        <file name="aohDBfromDict.py" file_cat="None" uri="None" prop="" path="aoh\aohdbfromdict.py" type="py" view="text"/>
+        <file name="aohdbfromdictnew.py" file_cat="None" uri="None" prop="" path="aoh\aohdbfromdictnew.py" type="py" view="text"/>
+        <file name="aohdbfromdictorig.py" file_cat="None" uri="None" prop="" path="aoh\aohdbfromdictorig.py" type="py" view="text"/>
+        <file name="aohexcel_csv.py" file_cat="None" uri="None" prop="" path="aoh\aohexcel_csv.py" type="py" view="text"/>
+        <file name="aohhtmlparser.py" file_cat="None" uri="None" prop="" path="aoh\aohhtmlparser.py" type="py" view="text"/>
+        <file name="aohhtmlutils.py" file_cat="None" uri="None" prop="" path="aoh\aohhtmlutils.py" type="py" view="text"/>
+        <file name="aohmyutils.py" file_cat="None" uri="None" prop="" path="aoh\aohmyutils.py" type="py" view="text"/>
+        <file name="aohwordtotext" file_cat="None" uri="None" prop="" path="aoh\aohwordtotext" type="" view="text"/>
+        <file name="aohwordtotext.py" file_cat="None" uri="None" prop="" path="aoh\aohwordtotext.py" type="py" view="text"/>
+        <file name="aohwordtotext.py" file_cat="None" uri="None" prop="" path="aohwordtotext.py" type="py" view="text"/>
+        <file name="beautifulsoup (2).py" file_cat="None" uri="None" prop="" path="aoh\beautifulsoup (2).py" type="py" view="text"/>
+        <file name="beautifulsoup-3.0.6.py" file_cat="None" uri="None" prop="" path="aoh\beautifulsoup-3.0.6.py" type="py" view="text"/>
+        <file name="beautifulsoup.py" file_cat="None" uri="None" prop="" path="aoh\beautifulsoup.py" type="py" view="text"/>
+        <file name="bitfields.py" file_cat="None" uri="None" prop="" path="bitfields.py" type="py" view="text"/>
+        <file name="board.py" file_cat="None" uri="None" prop="" path="game\board.py" type="py" view="text"/>
+        <file name="cache.py" file_cat="None" uri="None" prop="" path="cache.py" type="py" view="text"/>
+        <file name="cal_date_time.py" file_cat="None" uri="None" prop="" path="cal_date_time.py" type="py" view="text"/>
+        <file name="config.py" file_cat="None" uri="None" prop="" path="config.py" type="py" view="text"/>
+        <file name="conio.py" file_cat="None" uri="None" prop="" path="conio.py" type="py" view="text"/>
+        <file name="convert.py" file_cat="None" uri="None" prop="" path="convert.py" type="py" view="text"/>
+        <file name="copyobj.py" file_cat="None" uri="None" prop="" path="copyobj.py" type="py" view="text"/>
+        <file name="coverage_mod.py" file_cat="Programming" uri="None" prop="" path="coverage_mod.py" type="py" view="text"/>
+        <file name="customtreectrl.py" file_cat="None" uri="None" prop="" path="customtreectrl.py" type="py" view="text"/>
+        <file name="datetime.py" file_cat="None" uri="None" prop="" path="datetime.py" type="py" view="text"/>
+        <file name="debug.py" file_cat="None" uri="None" prop="" path="debug.py" type="py" view="text"/>
+        <file name="django_utils.py" file_cat="Web" uri="None" prop="" path="django_utils.py" type="py" view="text"/>
+        <file name="dsp.py" file_cat="Scientific" uri="None" prop="" path="dsp.py" type="py" view="text"/>
+        <file name="easyword.py" file_cat="None" uri="None" prop="" path="aoh\easyword.py" type="py" view="text"/>
+        <file name="emaillib.py" file_cat="None" uri="None" prop="" path="emaillib.py" type="py" view="text"/>
+        <file name="encryptedstorage.py" file_cat="None" uri="None" prop="" path="encryptedstorage.py" type="py" view="text"/>
+        <file name="engine.py" file_cat="None" uri="None" prop="" path="game\engine.py" type="py" view="text"/>
+        <file name="epydoc.config" file_cat="Admin" uri="None" prop="" path="epydoc.config" type="config" view="text"/>
+        <file name="exceldemos.py" file_cat="None" uri="None" prop="" path="aoh\exceldemos.py" type="py" view="text"/>
+        <file name="filelock.py" file_cat="None" uri="None" prop="" path="filelock.py" type="py" view="text"/>
+        <file name="fileobj.py" file_cat="None" uri="None" prop="" path="fileobj.py" type="py" view="text"/>
+        <file name="filewalker.py" file_cat="None" uri="None" prop="" path="filewalker.py" type="py" view="text"/>
+        <file name="filter.py" file_cat="Scientific" uri="None" prop="" path="filter.py" type="py" view="text"/>
+        <file name="finance.py" file_cat="None" uri="None" prop="" path="finance.py" type="py" view="text"/>
+        <file name="genwebpagefordb.py" file_cat="None" uri="None" prop="" path="aoh\genwebpagefordb.py" type="py" view="text"/>
+        <file name="gnuplot.py" file_cat="Scientific" uri="None" prop="" path="gnuplot.py" type="py" view="text"/>
+        <file name="graph.py" file_cat="wxPython" uri="None" prop="" path="graph.py" type="py" view="text"/>
+        <file name="graph3d.py" file_cat="Graphics" uri="None" prop="" path="graph3d.py" type="py" view="text"/>
+        <file name="html_utils.py" file_cat="Web" uri="None" prop="" path="html_utils.py" type="py" view="text"/>
+        <file name="htmlparse.py" file_cat="None" uri="None" prop="" path="htmlparse.py" type="py" view="text"/>
+        <file name="httpcmd.py" file_cat="Web" uri="None" prop="" path="httpcmd.py" type="py" view="text"/>
+        <file name="icmp.py" file_cat="None" uri="None" prop="" path="net\icmp.py" type="py" view="text"/>
+        <file name="imapobj.py" file_cat="None" uri="None" prop="" path="imapobj.py" type="py" view="text"/>
+        <file name="keys.py" file_cat="None" uri="None" prop="" path="keys.py" type="py" view="text"/>
+        <file name="lex.py" file_cat="String" uri="None" prop="" path="lex.py" type="py" view="text"/>
+        <file name="make.pmk" file_cat="Admin" uri="None" prop="" path="make.pmk" type="pmk" view="text"/>
+        <file name="makefile.inc" file_cat="None" uri="None" prop="" path="pymake\makefile.inc" type="inc" view="text"/>
+        <file name="markov.py" file_cat="None" uri="None" prop="" path="markov.py" type="py" view="text"/>
+        <file name="message.py" file_cat="None" uri="None" prop="" path="message.py" type="py" view="text"/>
+        <file name="metaprgm.py" file_cat="None" uri="None" prop="" path="metaprgm.py" type="py" view="text"/>
+        <file name="mincfile.py" file_cat="None" uri="None" prop="" path="mincfile.py" type="py" view="text"/>
+        <file name="mothersbraceletlettercount.py" file_cat="None" uri="None" prop="" path="aoh\mothersbraceletlettercount.py" type="py" view="text"/>
+        <file name="mthread.py" file_cat="None" uri="None" prop="" path="mthread.py" type="py" view="text"/>
+        <file name="mx.py" file_cat="wxPython" uri="None" prop="" path="mx.py" type="py" view="text"/>
+        <file name="mxmdi.py" file_cat="wxPython" uri="None" prop="" path="mxmdi.py" type="py" view="text"/>
+        <file name="mxstc.py" file_cat="wxPython" uri="None" prop="" path="mxstc.py" type="py" view="text"/>
+        <file name="mxtree.py" file_cat="None" uri="None" prop="" path="mxtree.py" type="py" view="text"/>
+        <file name="neural_net.py" file_cat="None" uri="None" prop="" path="neural_net.py" type="py" view="text"/>
+        <file name="noise.py" file_cat="None" uri="None" prop="" path="noise.py" type="py" view="text"/>
+        <file name="obj.py" file_cat="None" uri="None" prop="" path="obj.py" type="py" view="text"/>
+        <file name="options.py" file_cat="None" uri="None" prop="" path="options.py" type="py" view="text"/>
+        <file name="osscripts.py" file_cat="None" uri="None" prop="" path="osscripts.py" type="py" view="text"/>
+        <file name="parser.py" file_cat="String" uri="None" prop="" path="parser.py" type="py" view="text"/>
+        <file name="parser.py" file_cat="None" uri="None" prop="" path="aoh\parser.py" type="py" view="text"/>
+        <file name="path.py" file_cat="None" uri="None" prop="" path="path.py" type="py" view="text"/>
+        <file name="pathfile.py" file_cat="None" uri="None" prop="" path="pathfile.py" type="py" view="text"/>
+        <file name="pluginmgr.py" file_cat="None" uri="None" prop="" path="pluginmgr.py" type="py" view="text"/>
+        <file name="pmake.py" file_cat="None" uri="None" prop="" path="pymake\pmake.py" type="py" view="text"/>
+        <file name="pmakelib.py" file_cat="None" uri="None" prop="" path="pymake\pmakelib.py" type="py" view="text"/>
+        <file name="povray.py" file_cat="Graphics" uri="None" prop="" path="povray.py" type="py" view="text"/>
+        <file name="prob.py" file_cat="Scientific" uri="None" prop="" path="prob.py" type="py" view="text"/>
+        <file name="processPool.py" file_cat="None" uri="None" prop="" path="processpool.py" type="py" view="text"/>
+        <file name="psocket.py" file_cat="None" uri="None" prop="" path="net\psocket.py" type="py" view="text"/>
+        <file name="pyrpc.py" file_cat="None" uri="None" prop="" path="pyrpc.py" type="py" view="text"/>
+        <file name="random_url.py" file_cat="None" uri="None" prop="" path="c:\xp_shared\random_url.py" type="py" view="text"/>
+        <file name="relib.py" file_cat="String" uri="None" prop="" path="relib.py" type="py" view="text"/>
+        <file name="restservice.py" file_cat="None" uri="None" prop="" path="restservice.py" type="py" view="text"/>
+        <file name="rmtcmds.py" file_cat="None" uri="None" prop="" path="rmtcmds.py" type="py" view="text"/>
+        <file name="runpy.py" file_cat="Programming" uri="None" prop="" path="runpy.py" type="py" view="text"/>
+        <file name="simpleorm.py" file_cat="None" uri="None" prop="" path="simpleorm.py" type="py" view="text"/>
+        <file name="simpletk.py" file_cat="None" uri="None" prop="" path="simpletk.py" type="py" view="text"/>
+        <file name="simplex.py" file_cat="None" uri="None" prop="" path="simplex.py" type="py" view="text"/>
+        <file name="sql.py" file_cat="None" uri="None" prop="" path="sql.py" type="py" view="text"/>
+        <file name="sqlite.py" file_cat="None" uri="None" prop="" path="sqlite.py" type="py" view="text"/>
+        <file name="statistics.py" file_cat="Scientific" uri="None" prop="" path="statistics.py" type="py" view="text"/>
+        <file name="struct2.py" file_cat="None" uri="None" prop="" path="struct2.py" type="py" view="text"/>
+        <file name="svd.py" file_cat="Scientific" uri="None" prop="" path="svd.py" type="py" view="text"/>
+        <file name="syncdir.py" file_cat="None" uri="None" prop="" path="syncdir.py" type="py" view="text"/>
+        <file name="template.py" file_cat="String" uri="None" prop="" path="template.py" type="py" view="text"/>
+        <file name="tester.py" file_cat="Programming" uri="None" prop="" path="tester.py" type="py" view="text"/>
+        <file name="text_editor.py" file_cat="Programming" uri="None" prop="" path="mwx\text_editor.py" type="py" view="text"/>
+        <file name="thread.py" file_cat="None" uri="None" prop="" path="thread.py" type="py" view="text"/>
+        <file name="threadPool.py" file_cat="None" uri="None" prop="" path="threadpool.py" type="py" view="text"/>
+        <file name="timer.py" file_cat="None" uri="None" prop="" path="timer.py" type="py" view="text"/>
+        <file name="tree.py" file_cat="None" uri="None" prop="" path="mwx\tree.py" type="py" view="text"/>
+        <file name="txt2pdf.py" file_cat="None" uri="None" prop="" path="txt2pdf.py" type="py" view="text"/>
+        <file name="util.py" file_cat="None" uri="None" prop="" path="game\util.py" type="py" view="text"/>
+        <file name="util.py" file_cat="None" uri="None" prop="" path="net\util.py" type="py" view="text"/>
+        <file name="util.py" file_cat="None" uri="None" prop="" path="util.py" type="py" view="text"/>
+        <file name="viewcert.py" file_cat="None" uri="None" prop="" path="viewcert.py" type="py" view="text"/>
+        <file name="wavelet.py" file_cat="Scientific" uri="None" prop="" path="wavelet.py" type="py" view="text"/>
+        <file name="web_server.py" file_cat="Web" uri="None" prop="" path="web_server.py" type="py" view="text"/>
+        <file name="webget.py" file_cat="Web" uri="None" prop="" path="webget.py" type="py" view="text"/>
+        <file name="win32.py" file_cat="None" uri="None" prop="" path="win32.py" type="py" view="text"/>
+        <file name="wincursor.py" file_cat="None" uri="None" prop="" path="wincursor.py" type="py" view="text"/>
+        <file name="winreg.py" file_cat="None" uri="None" prop="" path="winreg.py" type="py" view="text"/>
+        <file name="wxdisp.py" file_cat="None" uri="None" prop="" path="game\wxdisp.py" type="py" view="text"/>
+        <file name="wxg.py" file_cat="None" uri="None" prop="" path="game\wxg.py" type="py" view="text"/>
+        <file name="wxpg.py" file_cat="wxPython" uri="None" prop="" path="wxpg.py" type="py" view="text"/>
+        <file name="xml_template.py" file_cat="String" uri="None" prop="" path="xml_template.py" type="py" view="text"/>
+        <file name="xmlparse.py" file_cat="String" uri="None" prop="" path="xmlparse.py" type="py" view="text"/>
+    </files>
+
+
+    <!--
+    Subprojects within this project
+    -->
+    <projects>
+        <!-- &lt;sub_proj pathname=""/&gt; -->
+    </projects>
+
+
+    <!--
+    Organizational display
+    -->
+    <categories>
+        <!--
+        path is filter applied in file order
+        order is display order [1:-1]
+        -->
+
+        <!-- &lt;file_cat order="" name="" path=""/&gt; -->
+        <file_cat path="*mwx/*" order="0" name="wxPython"/>
+        <file_cat path="*net/*" order="0" name="Network"/>
+        <file_cat path="*aoh/*" order="0" name="aoh"/>
+        <file_cat path="" order="0" name="Scientific"/>
+        <file_cat path="" order="0" name="Graphics"/>
+        <file_cat path="" order="0" name="Web"/>
+        <file_cat path="" order="0" name="Programming"/>
+        <file_cat path="*game/*" order="0" name="Game"/>
+        <file_cat path="" order="0" name="String"/>
+        <file_cat path="*pymake/*" order="0" name="pyMake"/>
+        <file_cat path="" order="-1" name="Admin"/>
+        <file_cat path="*" order="0" name="Misc"/>
+    </categories>
+
+    <tools/>
+    <helpFiles/>
+    <tools/>
+    <plugins/>
+</project>
+

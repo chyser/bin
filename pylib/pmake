@@ -1,0 +1,70 @@
+default: all
+.PHONY: all
+
+@@@
+
+if OS != "LINUX":
+    RM = 'rm.exe'
+else:
+    RM = 'rm'
+
+try:
+    PROJECT = PROJECT[0]
+except NameError:
+    PROJECT = "CPP"
+
+
+if PROJECT == "CPP":
+    if OS != "LINUX":
+
+        CC = 'cl.exe'
+        RC = 'rc.exe'
+        AR = 'lib.exe'
+
+        OSVER = "-D WINDOWS"
+
+        OPTS = "/MT  /G5 /GX /nologo " + OSVER
+        DBGOPTS = "/Zi"
+        PRODOPTS = "/O2"
+
+        LOCAL_INCLUDE = '-I"C:/libcpp/include"'
+        MS_INCLUDE = '-I"C:/Program Files/Microsoft Visual Studio/VC98/include"'
+        INCLUDE = LOCAL_INCLUDE + ' ' + MS_INCLUDE
+
+        LIBPATH = 'C:/libcpp/lib;C:/Program Files/Microsoft Visual Studio/VC98/lib'
+        #export LIB := $(LIBPATH)
+
+        LIBS = "user32.lib advapi32.lib comdlg32.lib uuid.lib"
+
+        CFLAGS = OPTS + ' ' + DBGOPTS + ' ' + INCLUDE
+
+        #MKEXE = r'        $(CC) -Fe$@ $(CFLAGS) $^ $(LIBS)'
+
+        print r"""
+clean:
+	$(RM) -f *.obj *.exe *.lib *.dll *.pdb *.ilk *.res
+
+%.obj : %.cpp
+	$(CC) -c $(CFLAGS) $(CPPFLAGS) $< -o $@
+
+%.obj : %.c
+	$(CC) -c $(CFLAGS) $< -o $@
+"""
+
+elif PROJECT == "PYTHON":
+    CHECKER = "checker"
+
+    print """
+
+.SUFFIXES: .chk .py
+%.chk : %.py
+\t$(CHECKER) $<
+
+clean:
+\t$(RM) -f *.chk
+"""
+@@@
+
+
+
+
