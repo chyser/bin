@@ -54,7 +54,7 @@ while 1:
     print "\n" + '-'*80
     print "Logging in: '%s'" % time.ctime()
 
-    p = pexpect.spawn("sudo /usr/sbin/openconnect -u {0} {1]".format(uname, url))
+    p = pexpect.spawn("sudo /usr/sbin/openconnect -u {0} {1}".format(uname, url))
     i = p.expect(["chrish's password:", 'Password:'])
     sys.stdout.write(p.before)
 
