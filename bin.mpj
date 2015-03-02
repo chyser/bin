@@ -1,0 +1,245 @@
+<!--
+MyEdit Project File
+-->
+<project version="2.2" type="Project" name="bin">
+
+    <!--
+    Environment for this project
+    -->
+
+    <env eolMode="CRLF" backupDir="./bak" dir="C:/bin"/>
+
+    <!--
+    Editor build commands mapped to function keys
+    -->
+
+    <build_cmds>
+        <cmd cmd="pmake.bat" type="build"/>
+        <cmd cmd="None" type="rebuild"/>
+        <cmd cmd="runit25.bat -p -d. myedit.py myedit1.mpj" type="execute"/>
+        <cmd cmd="None" type="debug"/>
+        <cmd cmd="None" type="build_unit"/>
+        <cmd cmd="None" type="rebuild_unit"/>
+        <cmd cmd="runit25.bat -p -d. %s" type="execute_unit"/>
+        <cmd cmd="None" type="debug_unit"/>
+    </build_cmds>
+
+
+    <!--
+    Source Control
+    -->
+    <source_control_cmds>
+        <cmd cmd="mycvs.py add $file_dir" type="add"/>
+        <cmd cmd="mycvs.py cf $file_dir" type="check"/>
+        <cmd cmd='mycvs.py -m "$msg" ci $file_dir' type="checkin"/>
+        <cmd cmd="mycvs.py up $file_dir" type="update"/>
+    </source_control_cmds>
+
+
+    <!--
+    Per Project Configuration
+    -->
+    <project_configuration/>
+
+    <!--
+    Files in project
+    -->
+    <files>
+        <!--
+        path is only required field
+        -->
+
+        <!-- &lt;file path="C:/bin/pylib/pylib/filter.py" file_cat="None" view="text" type="py" name="filter.py" prop=""/&gt; -->
+        <file name="PythonAdministrationService.py" file_cat="None" uri="None" prop="" path="pythonadministrationservice.py" type="py" view="text"/>
+        <file name="afcleanup.py" file_cat="None" uri="None" prop="" path="afcleanup.py" type="py" view="text"/>
+        <file name="analyzeClass.py" file_cat="None" uri="None" prop="" path="analyzeclass.py" type="py" view="text"/>
+        <file name="ascii.py" file_cat="None" uri="None" prop="" path="ascii.py" type="py" view="text"/>
+        <file name="autoflv.py" file_cat="None" uri="None" prop="" path="autoflv.py" type="py" view="text"/>
+        <file name="beautify.py" file_cat="None" uri="None" prop="" path="beautify.py" type="py" view="text"/>
+        <file name="bin.mpj" file_cat="None" uri="None" prop="" path="bin.mpj" type="mpj" view="text"/>
+        <file name="calcsheet.py" file_cat="None" uri="None" prop="" path="calcsheet.py" type="py" view="text"/>
+        <file name="car_music.py" file_cat="None" uri="None" prop="" path="car_music.py" type="py" view="text"/>
+        <file name="cc.py" file_cat="None" uri="None" prop="" path="cc.py" type="py" view="text"/>
+        <file name="cf.py" file_cat="None" uri="None" prop="" path="cf.py" type="py" view="text"/>
+        <file name="cfd.py" file_cat="None" uri="None" prop="" path="cfd.py" type="py" view="text"/>
+        <file name="cff.py" file_cat="None" uri="None" prop="" path="cff.py" type="py" view="text"/>
+        <file name="chardiff.py" file_cat="None" uri="None" prop="" path="chardiff.py" type="py" view="text"/>
+        <file name="chk_modules.py" file_cat="None" uri="None" prop="" path="chk_modules.py" type="py" view="text"/>
+        <file name="chkurls.py" file_cat="None" uri="None" prop="" path="chkurls.py" type="py" view="text"/>
+        <file name="clrhex2dec.py" file_cat="None" uri="None" prop="" path="clrhex2dec.py" type="py" view="text"/>
+        <file name="compilexrc.py" file_cat="None" uri="None" prop="" path="compilexrc.py" type="py" view="text"/>
+        <file name="convert.py" file_cat="None" uri="None" prop="" path="convert.py" type="py" view="text"/>
+        <file name="copyit.py" file_cat="None" uri="None" prop="" path="copyit.py" type="py" view="text"/>
+        <file name="copytime.py" file_cat="None" uri="None" prop="" path="copytime.py" type="py" view="text"/>
+        <file name="coverage.py" file_cat="None" uri="None" prop="" path="coverage.py" type="py" view="text"/>
+        <file name="cpcpp2c.py" file_cat="None" uri="None" prop="" path="cpcpp2c.py" type="py" view="text"/>
+        <file name="crlf.py" file_cat="None" uri="None" prop="" path="crlf.py" type="py" view="text"/>
+        <file name="cutfile.py" file_cat="None" uri="None" prop="" path="cutfile.py" type="py" view="text"/>
+        <file name="cvs_add.py" file_cat="None" uri="None" prop="" path="cvs_add.py" type="py" view="text"/>
+        <file name="cvs_ci.py" file_cat="None" uri="None" prop="" path="cvs_ci.py" type="py" view="text"/>
+        <file name="cvs_up.py" file_cat="None" uri="None" prop="" path="cvs_up.py" type="py" view="text"/>
+        <file name="cvt_flv_mp3.py" file_cat="None" uri="None" prop="" path="cvt_flv_mp3.py" type="py" view="text"/>
+        <file name="cvtimage.py" file_cat="None" uri="None" prop="" path="cvtimage.py" type="py" view="text"/>
+        <file name="cvtpdf.py" file_cat="None" uri="None" prop="" path="cvtpdf.py" type="py" view="text"/>
+        <file name="cvttxt.py" file_cat="None" uri="None" prop="" path="cvttxt.py" type="py" view="text"/>
+        <file name="dhcpc.py" file_cat="None" uri="None" prop="" path="dhcpc.py" type="py" view="text"/>
+        <file name="diffdir.py" file_cat="None" uri="None" prop="" path="diffdir.py" type="py" view="text"/>
+        <file name="dirsync.py" file_cat="None" uri="None" prop="" path="dirsync.py" type="py" view="text"/>
+        <file name="dirsyncsrv.py" file_cat="None" uri="None" prop="" path="dirsyncsrv.py" type="py" view="text"/>
+        <file name="diskusage.py" file_cat="None" uri="None" prop="" path="diskusage.py" type="py" view="text"/>
+        <file name="diskusage.py" file_cat="None" uri="None" prop="" path="diskusage.py" type="py" view="text"/>
+        <file name="dns.py" file_cat="None" uri="None" prop="" path="dns.py" type="py" view="text"/>
+        <file name="dns_server.py" file_cat="None" uri="None" prop="" path="dns_server.py" type="py" view="text"/>
+        <file name="drives.py" file_cat="None" uri="None" prop="" path="drives.py" type="py" view="text"/>
+        <file name="dumpmd.py" file_cat="None" uri="None" prop="" path="dumpmd.py" type="py" view="text"/>
+        <file name="empire_util.py" file_cat="None" uri="None" prop="" path="empire_util.py" type="py" view="text"/>
+        <file name="epydoc.py" file_cat="None" uri="None" prop="" path="epydoc.py" type="py" view="text"/>
+        <file name="find.py" file_cat="None" uri="None" prop="" path="find.py" type="py" view="text"/>
+        <file name="flashcard.py" file_cat="None" uri="None" prop="" path="flashcard.py" type="py" view="text"/>
+        <file name="fmt_email.py" file_cat="None" uri="None" prop="" path="fmt_email.py" type="py" view="text"/>
+        <file name="fmt_email.py" file_cat="None" uri="None" prop="" path="fmt_email.py" type="py" view="text"/>
+        <file name="fonts.py" file_cat="None" uri="None" prop="" path="fonts.py" type="py" view="text"/>
+        <file name="fret_calc.py" file_cat="None" uri="None" prop="" path="fret_calc.py" type="py" view="text"/>
+        <file name="ftpmirror.py" file_cat="None" uri="None" prop="" path="ftpmirror.py" type="py" view="text"/>
+        <file name="ftpserver.py" file_cat="None" uri="None" prop="" path="ftpserver.py" type="py" view="text"/>
+        <file name="genlo.py" file_cat="None" uri="None" prop="" path="genlo.py" type="py" view="text"/>
+        <file name="genlo.py" file_cat="None" uri="None" prop="" path="genlo.py" type="py" view="text"/>
+        <file name="genpasswd.py" file_cat="None" uri="None" prop="" path="genpasswd.py" type="py" view="text"/>
+        <file name="genpasswd.py" file_cat="None" uri="None" prop="" path="genpasswd.py" type="py" view="text"/>
+        <file name="getlnk.py" file_cat="None" uri="None" prop="" path="getlnk.py" type="py" view="text"/>
+        <file name="http_file_server.py" file_cat="None" uri="None" prop="" path="http_file_server.py" type="py" view="text"/>
+        <file name="http_proxy.py" file_cat="None" uri="None" prop="" path="http_proxy.py" type="py" view="text"/>
+        <file name="httpcmd.py" file_cat="None" uri="None" prop="" path="httpcmd.py" type="py" view="text"/>
+        <file name="id3-tagger.py" file_cat="None" uri="None" prop="" path="id3-tagger.py" type="py" view="text"/>
+        <file name="id3.py" file_cat="None" uri="None" prop="" path="id3.py" type="py" view="text"/>
+        <file name="imap_check.py" file_cat="None" uri="None" prop="" path="imap_check.py" type="py" view="text"/>
+        <file name="isprime.py" file_cat="None" uri="None" prop="" path="isprime.py" type="py" view="text"/>
+        <file name="jbuilder.py" file_cat="None" uri="None" prop="" path="jbuilder.py" type="py" view="text"/>
+        <file name="js++.py" file_cat="None" uri="None" prop="" path="js++.py" type="py" view="text"/>
+        <file name="listmusicplayer.py" file_cat="None" uri="None" prop="" path="listmusicplayer.py" type="py" view="text"/>
+        <file name="ln.py" file_cat="None" uri="None" prop="" path="ln.py" type="py" view="text"/>
+        <file name="lnexe.py" file_cat="None" uri="None" prop="" path="lnexe.py" type="py" view="text"/>
+        <file name="lnexe.py" file_cat="None" uri="None" prop="" path="lnexe.py" type="py" view="text"/>
+        <file name="loadcntl.py" file_cat="None" uri="None" prop="" path="loadcntl.py" type="py" view="text"/>
+        <file name="mailfiles.py" file_cat="None" uri="None" prop="" path="mailfiles.py" type="py" view="text"/>
+        <file name="make.py" file_cat="None" uri="None" prop="" path="make.py" type="py" view="text"/>
+        <file name="makefile.inc" file_cat="None" uri="None" prop="" path="pylib\pylib\pymake\makefile.inc" type="inc" view="text"/>
+        <file name="man.py" file_cat="None" uri="None" prop="" path="man.py" type="py" view="text"/>
+        <file name="manage_passwords.py" file_cat="None" uri="None" prop="" path="manage_passwords.py" type="py" view="text"/>
+        <file name="mcp.py" file_cat="None" uri="None" prop="" path="mcp.py" type="py" view="text"/>
+        <file name="md5sum.py" file_cat="None" uri="None" prop="" path="md5sum.py" type="py" view="text"/>
+        <file name="megacopy.py" file_cat="None" uri="None" prop="" path="megacopy.py" type="py" view="text"/>
+        <file name="mergefiles.py" file_cat="None" uri="None" prop="" path="mergefiles.py" type="py" view="text"/>
+        <file name="mk_cmd_help.py" file_cat="None" uri="None" prop="" path="mk_cmd_help.py" type="py" view="text"/>
+        <file name="mkbatpy.py" file_cat="None" uri="None" prop="" path="mkbatpy.py" type="py" view="text"/>
+        <file name="mkcvs.py" file_cat="None" uri="None" prop="" path="mkcvs.py" type="py" view="text"/>
+        <file name="mkdiffile.py" file_cat="None" uri="None" prop="" path="mkdiffile.py" type="py" view="text"/>
+        <file name="mklinks.py" file_cat="None" uri="None" prop="" path="mklinks.py" type="py" view="text"/>
+        <file name="mkmake.py" file_cat="None" uri="None" prop="" path="mkmake.py" type="py" view="text"/>
+        <file name="mkproj.py" file_cat="None" uri="None" prop="" path="mkproj.py" type="py" view="text"/>
+        <file name="mmtn.py" file_cat="None" uri="None" prop="" path="mmtn.py" type="py" view="text"/>
+        <file name="mtn.py" file_cat="None" uri="None" prop="" path="mtn.py" type="py" view="text"/>
+        <file name="mvmusic.py" file_cat="None" uri="None" prop="" path="mvmusic.py" type="py" view="text"/>
+        <file name="mvmusica.py" file_cat="None" uri="None" prop="" path="mvmusica.py" type="py" view="text"/>
+        <file name="myc.py" file_cat="None" uri="None" prop="" path="myc.py" type="py" view="text"/>
+        <file name="mycvs.py" file_cat="None" uri="None" prop="" path="mycvs.py" type="py" view="text"/>
+        <file name="mydns.py" file_cat="None" uri="None" prop="" path="mydns.py" type="py" view="text"/>
+        <file name="myedit.py" file_cat="None" uri="None" prop="" path="myedit.py" type="py" view="text"/>
+        <file name="mymtn.py" file_cat="None" uri="None" prop="" path="mymtn.py" type="py" view="text"/>
+        <file name="ndiff.py" file_cat="None" uri="None" prop="" path="ndiff.py" type="py" view="text"/>
+        <file name="netutil.py" file_cat="None" uri="None" prop="" path="netutil.py" type="py" view="text"/>
+        <file name="netutils.py" file_cat="None" uri="None" prop="" path="netutils.py" type="py" view="text"/>
+        <file name="newerthan.py" file_cat="None" uri="None" prop="" path="newerthan.py" type="py" view="text"/>
+        <file name="nspcmp.py" file_cat="None" uri="None" prop="" path="nspcmp.py" type="py" view="text"/>
+        <file name="parsetab.py" file_cat="None" uri="None" prop="" path="parsetab.py" type="py" view="text"/>
+        <file name="path.py" file_cat="None" uri="None" prop="" path="path.py" type="py" view="text"/>
+        <file name="perm.py" file_cat="None" uri="None" prop="" path="perm.py" type="py" view="text"/>
+        <file name="permutations.py" file_cat="None" uri="None" prop="" path="permutations.py" type="py" view="text"/>
+        <file name="pinger.py" file_cat="None" uri="None" prop="" path="pinger.py" type="py" view="text"/>
+        <file name="pmake.py" file_cat="None" uri="None" prop="" path="pmake.py" type="py" view="text"/>
+        <file name="pmake.py" file_cat="None" uri="None" prop="" path="pmake.py" type="py" view="text"/>
+        <file name="print.py" file_cat="None" uri="None" prop="" path="print.py" type="py" view="text"/>
+        <file name="printbin.py" file_cat="None" uri="None" prop="" path="printbin.py" type="py" view="text"/>
+        <file name="proxy_alert.py" file_cat="None" uri="None" prop="" path="proxy_alert.py" type="py" view="text"/>
+        <file name="push_file.py" file_cat="None" uri="None" prop="" path="push_file.py" type="py" view="text"/>
+        <file name="pycpp.py" file_cat="None" uri="None" prop="" path="pycpp.py" type="py" view="text"/>
+        <file name="pydiff.py" file_cat="None" uri="None" prop="" path="pydiff.py" type="py" view="text"/>
+        <file name="pyhelp.py" file_cat="None" uri="None" prop="" path="pyhelp.py" type="py" view="text"/>
+        <file name="pylibs.py" file_cat="None" uri="None" prop="" path="pylibs.py" type="py" view="text"/>
+        <file name="pyrexc.py" file_cat="None" uri="None" prop="" path="pyrexc.py" type="py" view="text"/>
+        <file name="readlog.py" file_cat="None" uri="None" prop="" path="readlog.py" type="py" view="text"/>
+        <file name="recv.py" file_cat="None" uri="None" prop="" path="recv.py" type="py" view="text"/>
+        <file name="regchk.py" file_cat="None" uri="None" prop="" path="regchk.py" type="py" view="text"/>
+        <file name="runit.bat" file_cat="None" uri="None" prop="" path="runit.bat" type="bat" view="text"/>
+        <file name="runit.py" file_cat="None" uri="None" prop="" path="runit.py" type="py" view="text"/>
+        <file name="runit26.bat" file_cat="None" uri="None" prop="" path="runit26.bat" type="bat" view="text"/>
+        <file name="screen.py" file_cat="None" uri="None" prop="" path="screen.py" type="py" view="text"/>
+        <file name="secure.py" file_cat="None" uri="None" prop="" path="secure.py" type="py" view="text"/>
+        <file name="send.py" file_cat="None" uri="None" prop="" path="send.py" type="py" view="text"/>
+        <file name="setup_tunnels.py" file_cat="None" uri="None" prop="" path="setup_tunnels.py" type="py" view="text"/>
+        <file name="show_syms.py" file_cat="None" uri="None" prop="" path="show_syms.py" type="py" view="text"/>
+        <file name="simxfer.py" file_cat="None" uri="None" prop="" path="simxfer.py" type="py" view="text"/>
+        <file name="smsh.py" file_cat="None" uri="None" prop="" path="smsh.py" type="py" view="text"/>
+        <file name="snapshot.py" file_cat="None" uri="None" prop="" path="snapshot.py" type="py" view="text"/>
+        <file name="srch.py" file_cat="None" uri="None" prop="" path="srch.py" type="py" view="text"/>
+        <file name="sslprobe.py" file_cat="None" uri="None" prop="" path="sslprobe.py" type="py" view="text"/>
+        <file name="tcp_repeat.py" file_cat="None" uri="None" prop="" path="tcp_repeat.py" type="py" view="text"/>
+        <file name="test_check.py" file_cat="None" uri="None" prop="" path="test_check.py" type="py" view="text"/>
+        <file name="tester.py" file_cat="None" uri="None" prop="" path="tester.py" type="py" view="text"/>
+        <file name="testwbem.py" file_cat="None" uri="None" prop="" path="testwbem.py" type="py" view="text"/>
+        <file name="testwmi.py" file_cat="None" uri="None" prop="" path="testwmi.py" type="py" view="text"/>
+        <file name="timecvt.py" file_cat="None" uri="None" prop="" path="timecvt.py" type="py" view="text"/>
+        <file name="timeit.py" file_cat="None" uri="None" prop="" path="timeit.py" type="py" view="text"/>
+        <file name="timer.py" file_cat="None" uri="None" prop="" path="timer.py" type="py" view="text"/>
+        <file name="topology.py" file_cat="None" uri="None" prop="" path="topology.py" type="py" view="text"/>
+        <file name="tracer.py" file_cat="None" uri="None" prop="" path="tracer.py" type="py" view="text"/>
+        <file name="ubu.py" file_cat="None" uri="None" prop="" path="ubu.py" type="py" view="text"/>
+        <file name="uncvs.py" file_cat="None" uri="None" prop="" path="uncvs.py" type="py" view="text"/>
+        <file name="unitintparse.py" file_cat="None" uri="None" prop="" path="unitintparse.py" type="py" view="text"/>
+        <file name="unsecure.py" file_cat="None" uri="None" prop="" path="unsecure.py" type="py" view="text"/>
+        <file name="untabify.py" file_cat="None" uri="None" prop="" path="untabify.py" type="py" view="text"/>
+        <file name="update_myedit.py" file_cat="None" uri="None" prop="" path="update_myedit.py" type="py" view="text"/>
+        <file name="utc_time.py" file_cat="None" uri="None" prop="" path="utc_time.py" type="py" view="text"/>
+        <file name="vnc.py" file_cat="None" uri="None" prop="" path="vnc.py" type="py" view="text"/>
+        <file name="webget.py" file_cat="None" uri="None" prop="" path="webget.py" type="py" view="text"/>
+        <file name="zippy.py" file_cat="None" uri="None" prop="" path="zippy.py" type="py" view="text"/>
+    </files>
+
+
+    <!--
+    Subprojects within this project
+    -->
+    <projects>
+        <!-- &lt;sub_proj pathname=""/&gt; -->
+        <sub_proj pathname="c:\bin\pylib\pylib.mpj"/>
+    </projects>
+
+
+    <!--
+    Organizational display
+    -->
+    <categories>
+        <!--
+        path is filter applied in file order
+        order is display order [1:-1]
+        -->
+
+        <!-- &lt;file_cat order="" name="" path=""/&gt; -->
+        <file_cat path="*.py" order="0" name="Python"/>
+        <file_cat path="*.bat" order="0" name="Batch"/>
+        <file_cat path="*" order="0" name="Misc"/>
+    </categories>
+
+    <tools>
+        <tool path="C:\Program Files\TortoiseSVN\bin\TortoiseMerge.exe" help="File Differencer" desc="Diff"/>
+    </tools>
+
+    <helpFiles>
+        <helpfile path="C:\bin\pylib\pylib\html\index.html" help="chrish's pylib" desc="PyLib"/>
+        <helpfile path="C:\help\python26.chm.lnk" help="" desc="Python 2.6"/>
+    </helpFiles>
+
+    <tools/>
+    <plugins/>
+</project>
+
