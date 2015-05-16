@@ -1,0 +1,4 @@
+#!/bin/env bash
+
+echo -ne "\033[0m"
+clear

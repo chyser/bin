@@ -7,7 +7,7 @@ MyEdit Project File
     Environment for this project
     -->
 
-    <env eolMode="CRLF" backupDir="./bak" dir="C:\bin\pylib\pylib"/>
+    <env eolMode="CRLF" backupDir="./bak" dir="C:\bin\pylib"/>
 
     <!--
     Editor build commands mapped to function keys

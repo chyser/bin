@@ -37,15 +37,26 @@ def main(argv):
 
         print "Opening", m
 	session = oss.r("qdbus org.kde.konsole /Konsole newSession", '$').strip()
-        oss.r("qdbus org.kde.konsole /Sessions/%s setTitle 1 %s" % (session, m))
+        s = oss.r("qdbus org.kde.konsole /Sessions/%s setTitle 1 %s" % (session, m), '|')
+        if s.strip():
+            print s.rstrip()
 
-        oss.r('qdbus org.kde.konsole /Sessions/%s sendText "ssh %s"' % (session, m))
-        oss.r('~/bin/qdsendnl %s' % session)
+        s = oss.r('qdbus org.kde.konsole /Sessions/%s sendText "ssh %s"' % (session, m), '|')
+        if s.strip():
+            print s.rstrip()
+
+        s = oss.r('~/bin/qdsendnl %s' % session, '|')
+        if s.strip():
+            print s.rstrip()
 
         for cmd in machs[m]:
     	    if cmd:
-	        oss.r('qdbus org.kde.konsole /Sessions/%s sendText "%s"' % (session, cmd))
-	    oss.r('~/bin/qdsendnl %s' % session)
+	        s = oss.r('qdbus org.kde.konsole /Sessions/%s sendText "%s"' % (session, cmd), '|')
+                if s.strip():
+                    print s.rstrip()
+	    s = oss.r('~/bin/qdsendnl %s' % session, '|')
+            if s.strip():
+                print s.rstrip()
 
 
 if __name__ == "__main__":

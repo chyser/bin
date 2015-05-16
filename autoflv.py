@@ -43,7 +43,7 @@ def main(argv):
 
         options:
             -p | --print       : print directory path
-            -c | --count <n>   : num files for client to get
+            -c | --count <n>   : num files for client to getf
             -l | --load        : show files the need to be loaded
             -Z | --connect     : client stay connected
             -P | --pause       : pause on errors before exit
@@ -487,8 +487,6 @@ class FileDB(object):
         return name
 
 
-
-
 #-------------------------------------------------------------------------------
 class Checker(object):
 #-------------------------------------------------------------------------------
@@ -516,7 +514,7 @@ class Checker(object):
                 url, page = self.sf.scan(line)
                 up = urlparse.urlparse(url).path
 
-                if not up.endswith('.flv'):
+                if not isCorrectFile(up):
                     continue
 
                 name = up.split('/')[-1] if '/' in up else up
@@ -833,6 +831,12 @@ def getFile(name, url, num_connections='4', speed='300000'):
             return True
 
         print('Error:', p.returncode)
+
+
+#-------------------------------------------------------------------------------
+def isCorrectFile(f):
+#-------------------------------------------------------------------------------
+    return f.endswith('.flv') or f.endswith('mp4')
 
 
 #-------------------------------------------------------------------------------

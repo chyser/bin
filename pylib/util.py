@@ -10,7 +10,7 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 
 
-import osscripts as oss
+import pylib.osscripts as oss
 
 import re
 import sys
@@ -252,6 +252,63 @@ class ErrRet(object):
 
 
 #-------------------------------------------------------------------------------
+class SafeFile(object):
+#-------------------------------------------------------------------------------
+    """ allows writes to a file such that any error does not alter the file
+    """
+    TMPPATH = '/tmp/'
+    TMPEXT = '.tmp'
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def __init__(self, fileName, seed=None, text=None):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        object.__init__(self)
+        self.fileName = fileName
+        self.tmpName = TMPPATH + seed + TMPEXT if seed else TMPPATH + fileName + TMPEXT
+        self.text = text
+        self.outf = None
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def fn(self):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        return self.tmpName
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def open(self):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        self.outf = open(self.tmpName, 'w')
+        return self.outf
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def close(self):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        self.outf.close()
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def doCopy(self):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        self.close()
+        if not oss.cmp(self.tmpName, self.fileName):
+            if self.text:
+                if '{0}' in text:
+                    text = text.format(self.fileName)
+                print(text)
+            oss.cp(self.tmpName, self.fileName)
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def __enter__(self):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        return self.open()
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def __exit__(self, typ, value, traceback):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        self.close()
+        if type is None:
+            self.doCopy()
+
+
+#-------------------------------------------------------------------------------
 def cvtU2A(s, errHandling='ignore'):
 #-------------------------------------------------------------------------------
     """ convert unicode 's' to ascii
@@ -458,6 +515,72 @@ def DiffIntersectLists(a, b):
     da = Dlist(a)
     db = Dlist(b)
     return db - da, da - db, da.intersection(db)
+
+
+#-------------------------------------------------------------------------------
+def permutations(n):
+#-------------------------------------------------------------------------------
+    s = set()
+    for a in range(n):
+        for b in range(a+1, n):
+            if a < b:
+                s.add((a, b))
+            elif b < a:
+                s.add((b, a))
+
+    return sorted(list(s))
+
+
+#-------------------------------------------------------------------------------
+class PrintOnce(object):
+#-------------------------------------------------------------------------------
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def __init__(self, supress=False, indent=0):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        object.__init__(self)
+        self.done = False
+        self.indent = indent
+        self.do = not supress
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def reset(self, setSupress=None):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        self.done = False
+        if setSupress is not None:
+            self.do = not setSupress
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def printOnce(self, *args):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        if self.do and not self.done:
+            self.done = True
+            if args:
+                print('    '*self.indent, end='')
+            print(*args)
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def print(self, *args):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        if self.do:
+            if args:
+                print('    '*self.indent, end='')
+            print(*args)
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def didPrint(self, *args):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        if self.do and self.done:
+            if args:
+                print('    '*self.indent, end='')
+            print(*args)
+
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+    def didntPrint(self, *args):
+    #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
+        if self.do and not self.done:
+            if args:
+                print('    '*self.indent, end='')
+            print(*args)
 
 
 #-------------------------------------------------------------------------------

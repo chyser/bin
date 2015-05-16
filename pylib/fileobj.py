@@ -11,7 +11,7 @@ from __future__ import division
 from __future__ import unicode_literals
 from __future__ import absolute_import
 
-import osscripts as oss
+import pylib.osscripts as oss
 
 #-------------------------------------------------------------------------------
 def FileObjectFactory(FileName, uri=None):

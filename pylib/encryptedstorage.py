@@ -14,7 +14,7 @@ from Crypto import Random
 
 from pbkdf2 import PBKDF2
 
-import osscripts as oss
+import pylib.osscripts as oss
 import pylib.util as util
 import pickle
 import zlib

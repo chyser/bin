@@ -1,15 +1,15 @@
-<!--
+<!-- 
 MyEdit Project File
 -->
 <project version="2.2" type="Project" name="bin">
 
-    <!--
+    <!--     
     Environment for this project
     -->
 
     <env eolMode="CRLF" backupDir="./bak" dir="C:/bin"/>
 
-    <!--
+    <!--     
     Editor build commands mapped to function keys
     -->
 
@@ -25,7 +25,7 @@ MyEdit Project File
     </build_cmds>
 
 
-    <!--
+    <!--     
     Source Control
     -->
     <source_control_cmds>
@@ -36,16 +36,16 @@ MyEdit Project File
     </source_control_cmds>
 
 
-    <!--
+    <!--     
     Per Project Configuration
     -->
     <project_configuration/>
 
-    <!--
+    <!--     
     Files in project
     -->
     <files>
-        <!--
+        <!--         
         path is only required field
         -->
 
@@ -66,8 +66,10 @@ MyEdit Project File
         <file name="chardiff.py" file_cat="None" uri="None" prop="" path="chardiff.py" type="py" view="text"/>
         <file name="chk_modules.py" file_cat="None" uri="None" prop="" path="chk_modules.py" type="py" view="text"/>
         <file name="chkurls.py" file_cat="None" uri="None" prop="" path="chkurls.py" type="py" view="text"/>
+        <file name="clnlines.py" file_cat="None" uri="None" prop="" path="clnlines.py" type="py" view="text"/>
         <file name="clrhex2dec.py" file_cat="None" uri="None" prop="" path="clrhex2dec.py" type="py" view="text"/>
         <file name="compilexrc.py" file_cat="None" uri="None" prop="" path="compilexrc.py" type="py" view="text"/>
+        <file name="cons.py" file_cat="None" uri="None" prop="" path="cons.py" type="py" view="text"/>
         <file name="convert.py" file_cat="None" uri="None" prop="" path="convert.py" type="py" view="text"/>
         <file name="copyit.py" file_cat="None" uri="None" prop="" path="copyit.py" type="py" view="text"/>
         <file name="copytime.py" file_cat="None" uri="None" prop="" path="copytime.py" type="py" view="text"/>
@@ -129,6 +131,7 @@ MyEdit Project File
         <file name="mcp.py" file_cat="None" uri="None" prop="" path="mcp.py" type="py" view="text"/>
         <file name="md5sum.py" file_cat="None" uri="None" prop="" path="md5sum.py" type="py" view="text"/>
         <file name="megacopy.py" file_cat="None" uri="None" prop="" path="megacopy.py" type="py" view="text"/>
+        <file name="menu.py" file_cat="None" uri="None" prop="" path="menu.py" type="py" view="text"/>
         <file name="mergefiles.py" file_cat="None" uri="None" prop="" path="mergefiles.py" type="py" view="text"/>
         <file name="mk_cmd_help.py" file_cat="None" uri="None" prop="" path="mk_cmd_help.py" type="py" view="text"/>
         <file name="mkbatpy.py" file_cat="None" uri="None" prop="" path="mkbatpy.py" type="py" view="text"/>
@@ -170,6 +173,7 @@ MyEdit Project File
         <file name="readlog.py" file_cat="None" uri="None" prop="" path="readlog.py" type="py" view="text"/>
         <file name="recv.py" file_cat="None" uri="None" prop="" path="recv.py" type="py" view="text"/>
         <file name="regchk.py" file_cat="None" uri="None" prop="" path="regchk.py" type="py" view="text"/>
+        <file name="repo.py" file_cat="None" uri="None" prop="" path="repo.py" type="py" view="text"/>
         <file name="runit.bat" file_cat="None" uri="None" prop="" path="runit.bat" type="bat" view="text"/>
         <file name="runit.py" file_cat="None" uri="None" prop="" path="runit.py" type="py" view="text"/>
         <file name="runit26.bat" file_cat="None" uri="None" prop="" path="runit26.bat" type="bat" view="text"/>
@@ -201,12 +205,14 @@ MyEdit Project File
         <file name="update_myedit.py" file_cat="None" uri="None" prop="" path="update_myedit.py" type="py" view="text"/>
         <file name="utc_time.py" file_cat="None" uri="None" prop="" path="utc_time.py" type="py" view="text"/>
         <file name="vnc.py" file_cat="None" uri="None" prop="" path="vnc.py" type="py" view="text"/>
+        <file name="vpn.py" file_cat="None" uri="None" prop="" path="vpn.py" type="py" view="text"/>
         <file name="webget.py" file_cat="None" uri="None" prop="" path="webget.py" type="py" view="text"/>
+        <file name="wnet.py" file_cat="None" uri="None" prop="" path="wnet.py" type="py" view="text"/>
         <file name="zippy.py" file_cat="None" uri="None" prop="" path="zippy.py" type="py" view="text"/>
     </files>
 
 
-    <!--
+    <!--     
     Subprojects within this project
     -->
     <projects>
@@ -215,11 +221,11 @@ MyEdit Project File
     </projects>
 
 
-    <!--
+    <!--     
     Organizational display
     -->
     <categories>
-        <!--
+        <!--         
         path is filter applied in file order
         order is display order [1:-1]
         -->

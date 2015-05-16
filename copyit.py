@@ -14,8 +14,8 @@ import time
 
 DELAY_TIME = 37
 IGNORE_EXTENSIONS = set(('.part', '.ob!', '.dap', '.dwn', '.st'))
-SRC_DIRS = ["C:/home/chrish/tmp", 'C:/home/test']
-DEST_DIRS = ['E:/tests/', 'L:/tests/', 'W:/dst1/', 'K:/tests/', 'C:/home/chrish/tmp1/']
+SRC_DIRS = ["C:/home/chrish/tmp", 'C:/home/test', "C:/home/me/tmp"]
+DEST_DIRS = ['E:/tests/', 'L:/tests/', 'S:/tests/', 'W:/dst1/', 'K:/tests/', 'C:/home/chrish/tmp1/']
 
 rec = {}
 

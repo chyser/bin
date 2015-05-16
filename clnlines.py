@@ -8,6 +8,7 @@ from __future__ import unicode_literals
 from __future__ import absolute_import
 
 import pylib.osscripts as oss
+import pylib.util as util
 
 TMP_FILE="/tmp/t.clean"
 
@@ -17,8 +18,6 @@ def main(argv):
     """ usage:
     """
     args, opts = oss.gopt(argv[1:], [], [], main.__doc__)
-
-
     for a in args:
         clean(a)
 
@@ -28,16 +27,10 @@ def main(argv):
 #-------------------------------------------------------------------------------
 def clean(fn):
 #-------------------------------------------------------------------------------
-    oss.cp(fn, "/tmp")
-
     with open(fn) as inf:
-        with open(TMP_FILE, "w") as outf:
+        with util.SafeFile(fn, 't.clean', 'cleaning file: {0}') as outf:
             for line in inf:
                 outf.write(line.rstrip() + '\n')
-
-    if not oss.cmp(TMP_FILE, fn):
-        print("cleaning lines: %s" % fn)
-        oss.cp(TMP_FILE, fn)
 
 
 if __name__ == "__main__":

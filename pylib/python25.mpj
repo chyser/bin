@@ -1,15 +1,15 @@
-<!--
+<!-- 
 MyEdit Project File
 -->
 <project version="2.2" type="Project" name="python25">
 
-    <!--
+    <!--     
     Environment for this project
     -->
 
     <env eolMode="CRLF" backupDir="./bak" dir="C:\bin\pylib\pylib"/>
 
-    <!--
+    <!--     
     Editor build commands mapped to function keys
     -->
 
@@ -25,7 +25,7 @@ MyEdit Project File
     </build_cmds>
 
 
-    <!--
+    <!--     
     Source Control
     -->
     <source_control_cmds>
@@ -36,16 +36,16 @@ MyEdit Project File
     </source_control_cmds>
 
 
-    <!--
+    <!--     
     Per Project Configuration
     -->
     <project_configuration/>
 
-    <!--
+    <!--     
     Files in project
     -->
     <files>
-        <!--
+        <!--         
         path is only required field
         -->
 
@@ -308,7 +308,7 @@ MyEdit Project File
     </files>
 
 
-    <!--
+    <!--     
     Subprojects within this project
     -->
     <projects>
@@ -316,11 +316,11 @@ MyEdit Project File
     </projects>
 
 
-    <!--
+    <!--     
     Organizational display
     -->
     <categories>
-        <!--
+        <!--         
         path is filter applied in file order
         order is display order [1:-1]
         -->
