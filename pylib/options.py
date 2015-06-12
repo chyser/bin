@@ -142,7 +142,7 @@ def mopt(cmdLineArgs, oneOnlyFlags, oneOnlyParams, *args, **kwds):
         and can be excaped by quotes ['"].
 
         If mopt() is called multiple times with a prior OptionClass 'opt'
-        instead of a cmd line, further processing can occur the remaining
+        instead of a cmd line, further processing can occur on the remaining
         command line options. This usually implies the first call had
         skipUnknownOps = True.
 
