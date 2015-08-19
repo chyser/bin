@@ -10,6 +10,7 @@ import pylib.keys as keys
 
 import string
 import random
+import hashlib
 
 #-------------------------------------------------------------------------------
 def main(argv):
@@ -21,33 +22,41 @@ def main(argv):
         Options:
            -l | --len <int> : length of passwd
 
-           -a | --all       : use 'nearly' all printable characters
-           -s | --simple    : use only letters and numbers
-           -q | --quick     : use quickChars
-           -m | --markov    : use a markov generator to make 'sensible' words
-           -x | --hex       : make a hex passwd
-           -h | --hp        : make an HP qualified password
+           -a | --all        : use 'nearly' all printable characters
+           -s | --simple     : use only letters and numbers
+           -q | --quick      : use quickChars
+           -m | --markov     : use a markov generator to make 'sensible' words
+           -x | --hex        : make a hex passwd
+           -h | --hp         : make an HP qualified password
+           -n | --next <old> : create next password from old one
 
-           -e | --extra     : add "extra"
+           -e | --extra      : add "extra"
 
-           -c | --check     : check a passwd against validation rules
-           -v | --verify    : validate against HP password rules
+           -c | --check      : check a passwd against validation rules
+           -v | --verify     : validate against HP password rules
     """
     args, opts = oss.gopt(argv[1:], [('a', 'all'), ('s', 'simple'), ('v', 'verify'),
-      ('c', 'check'), ('m', 'markov'), ('q', 'quick'), ('h', 'hp'), ('x', 'hex')], [('l', 'len'), ('e', 'extra')], main.__doc__)
+      ('c', 'check'), ('m', 'markov'), ('q', 'quick'), ('x', 'hex'), ('n', 'next')],
+      [('l', 'len'), ('e', 'extra')], main.__doc__)
 
     ## check password
     if opts.check:
         passwd = raw_input("enter key: ") if not args else args[0]
         print(passwd)
-        print("\nHPVerify:", HPVerify(passwd))
+        print("\nVerify:", HPVerify(passwd))
         oss.exit(0)
 
     ## set a default length
     length = 97 if opts.len is None else int(opts.len)
 
     ## get real random numbers
-    rg = random.SystemRandom()
+    if opts.next:
+        rg = random.Random()
+        seed = int(hashlib.sha256(args[0]).hexdigest(), 16) + 13
+        rg.seed(seed)
+    else:
+        rg = random.SystemRandom()
+
     num = rg.getrandbits(8 * length)
 
 
@@ -69,12 +78,12 @@ def main(argv):
     elif opts.quick:
         pwd = keys.cvtNum2QChars(num)
 
-    elif opts.hp:
-        while 1:
-            pwd = keys.cvtNum2ManyChars(num)
-            passwd = pwd[:length]
-            if HPVerify(passwd, verbose=False):
-                break
+###    elif opts.hp:
+###        while 1:
+###            pwd = keys.cvtNum2ManyChars(num)
+###            passwd = pwd[:length]
+###            if HPVerify(passwd, verbose=False):
+###                break
 
     else:
         pwd = keys.cvtNum2ManyChars(num)
@@ -87,7 +96,7 @@ def main(argv):
     print(passwd)
 
     if opts.verify:
-        print("\nHPVerify:", HPVerify(passwd))
+        print("\nVerify:", HPVerify(passwd))
 
     oss.exit(0)
 
@@ -103,6 +112,9 @@ def HPVerify(passwd, verbose=True):
 #-------------------------------------------------------------------------------
     lc = uc = num = sp = 0
 
+    if not (8 <= len(passwd) <= 32):
+        return
+
     for ch in passwd:
         if ch in string.ascii_lowercase:
             lc += 1
@@ -113,7 +125,7 @@ def HPVerify(passwd, verbose=True):
         elif ch in ",.?!@#$%^&*()-+":
             sp += 1
 
-    val = sp != 0 and num != 0 and lc != 0 and uc != 0 and len(passwd) >= 12
+    val = sp != 0 and num != 0 and lc != 0 and uc != 0
     if not val and verbose:
         print(lc, uc, num, sp, len(passwd))
     return val

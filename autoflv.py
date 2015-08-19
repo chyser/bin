@@ -428,7 +428,10 @@ class FileDB(object):
         name = self.gn(name)
 
         with self.lock:
-            return self.db[name]
+            try:
+                return self.db[name]
+            except KeyError:
+                return None
 
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -
     def getItems(self, cmp=None, **kw):
@@ -523,7 +526,7 @@ class Checker(object):
                     self.fdb.add(name, FileDBElement(name, url, page))
                 else:
                     v = self.fdb.get(name.rsplit('.', 1)[0])
-                    if v.failed and v.url != url:
+                    if v and v.failed and v.url != url:
                         s.append('   - %s -- readd' % name)
                         self.fdb.add(name, FileDBElement(name, url, page))
 
