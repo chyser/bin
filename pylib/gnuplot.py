@@ -131,7 +131,7 @@ class StackedPlot(PlotObject):
                 base[idx] += val
             dg.add(base, "with filledcurves x1 " + options)
 
-        dg.reverse()
+        #dg.reverse()
         dg.plot()
 
     #- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -

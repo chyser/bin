@@ -60,6 +60,7 @@ def setTimer(secs, func, args=None, kwds=None):
 
     thread.start_new_thread(delay, (None,))
 
+
 #-------------------------------------------------------------------------------
 def __test__():
 #-------------------------------------------------------------------------------
@@ -69,9 +70,8 @@ def __test__():
     import pylib.tester as tester
     return 0
 
-#-------------------------------------------------------------------------------
+
 if __name__ == "__main__":
-#-------------------------------------------------------------------------------
     import pylib.osscripts as oss
 
     def usage(rc, errmsg=""):
@@ -83,8 +83,6 @@ Error:
         oss.exit(rc)
 
     args, opts = oss.gopt(oss.argv[1:], [], [], usage)
-
-
 
     res += __test__()
     oss.exit(res)

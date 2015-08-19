@@ -35,7 +35,8 @@ import warnings
 import tempfile
 import subprocess
 
-import pylib.lex as lex
+#import pylib.lex as lex
+import lex
 
 
 try:
@@ -1390,6 +1391,14 @@ def paths(lst):
 
 
 #-------------------------------------------------------------------------------
+def getStartDir():
+#-------------------------------------------------------------------------------
+    """ return the starting directory of the program
+    """
+    return getpath(abspath(argv[0]))
+
+
+#-------------------------------------------------------------------------------
 def StartFile(fileName, err=None):
 #-------------------------------------------------------------------------------
     ''' performs a Windows "OPEN/EXECUTE" on fileName '''
@@ -1428,7 +1437,8 @@ def _usage(rc, doc, errmsg=""):
 usage = _usage
 
 
-from pylib.options import mopt as gopt
+#from pylib.options import mopt as gopt
+from options import mopt as gopt
 
 
 #

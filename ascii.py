@@ -1,3 +1,5 @@
+#!/bin/env python
+
 """
 usage: ascii [options]
 
@@ -13,19 +15,9 @@ Options:
 import pylib.osscripts as oss
 
 #-------------------------------------------------------------------------------
-def usage(rc, errmsg=""):
-#-------------------------------------------------------------------------------
-    """ provides doc string as usage information
-    """
-    print >> oss.stderr, __doc__
-    if errmsg:
-        print >> oss.stderr, "\nError:\n" + str(errmsg)
-    oss.exit(rc)
-
-#-------------------------------------------------------------------------------
 def main(argv):
 #-------------------------------------------------------------------------------
-    args, opts = oss.gopt(argv[1:], [('h', 'hex'), ('d', 'decimal'), ('o', 'octal')], [], usage)
+    args, opts = oss.gopt(argv[1:], [('h', 'hex'), ('d', 'decimal'), ('o', 'octal')], [], __doc__)
 
     disp = "%03x"
 
@@ -49,9 +41,8 @@ def main(argv):
 
     oss.exit(0)
 
-#-------------------------------------------------------------------------------
+
 if __name__ == "__main__":
-#-------------------------------------------------------------------------------
     main(oss.argv)
 
 

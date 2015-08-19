@@ -1,4 +1,13 @@
 #!/usr/bin/env python
+"""
+"""
+
+from __future__ import print_function
+from __future__ import division
+#from __future__ import unicode_literals
+from __future__ import absolute_import
+
+import pylib.osscripts as oss
 
 import sys
 import time
@@ -25,7 +34,7 @@ def getpid(name):
 #------------------------------------------------------------------------------
 def sigHandler(signum, frame):
 #------------------------------------------------------------------------------
-    print "handler %d" % signum
+    print("handler %d" % signum)
 
     pid = getpid("openconnect")[0]
     #os.kill(pid, signal.SIGKILL)
@@ -35,7 +44,7 @@ def sigHandler(signum, frame):
 
 
 #------------------------------------------------------------------------------
-def readInfo(fn):
+def readConfig(fn):
 #------------------------------------------------------------------------------
     with open(fn) as inf:
         l = []
@@ -46,37 +55,51 @@ def readInfo(fn):
         return tuple(l)
 
 
-signal.signal(signal.SIGINT, sigHandler)
+#-------------------------------------------------------------------------------
+def main(argv):
+#-------------------------------------------------------------------------------
+    """ usage:
+    """
+    args, opts = oss.gopt(argv[1:], [], [], main.__doc__)
 
-uname, url, pwd, vpwd = readInfo('vpn.dat')
+    signal.signal(signal.SIGINT, sigHandler)
 
-while 1:
-    print "\n" + '-'*80
-    print "Logging in: '%s'" % time.ctime()
+    spath = oss.getStartDir() + '/'
 
-    p = pexpect.spawn("sudo /usr/sbin/openconnect -u {0} {1}".format(uname, url))
-    i = p.expect(["chrish's password:", 'Password:'])
-    sys.stdout.write(p.before)
-
-    if i == 0:
-        p.sendline(pwd)
-        p.expect([ 'Password:'])
-        sys.stdout.write(p.before)
-
-    p.sendline(vpwd)
+    uname, url, pwd, vpwd = readConfig(spath + '/' + 'vpn.dat')
 
     while 1:
+        print("\n" + '-'*80)
+        print("Logging in: '%s'" % time.ctime())
+
+        p = pexpect.spawn("sudo /usr/sbin/openconnect -u {0} {1}".format(uname, url))
+        i = p.expect(["chrish's password:", 'Password:'])
+        sys.stdout.write(p.before)
+
+        if i == 0:
+            p.sendline(pwd)
+            p.expect([ 'Password:'])
+            sys.stdout.write(p.before)
+
+        p.sendline(vpwd)
+
+        while 1:
+            try:
+                s = p.read_nonblocking(1, None)
+                sys.stdout.write(s)
+            except pexpect.EOF:
+                break
+            except AttributeError:
+                break
+
         try:
-            s = p.read_nonblocking(1, None)
-            sys.stdout.write(s)
-        except pexpect.EOF:
-            break
-        except AttributeError:
-            break
-
-    try:
-        p.wait()
-    except pexpect.ExceptionPexpect:
-        pass
+            p.wait()
+        except pexpect.ExceptionPexpect:
+            pass
 
 
+    oss.exit(0)
+
+
+if __name__ == "__main__":
+    main(oss.argv)
